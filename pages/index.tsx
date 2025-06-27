@@ -4,7 +4,7 @@ import ProductCard from '../components/ProductCard';
 import { getProducts } from '../lib/api';
 
 export default function Home() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     getProducts(5).then(setProducts);
